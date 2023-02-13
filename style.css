@@ -108,9 +108,12 @@ section {
 }
 
 .navbar {
+    position: fixed;
     width: 100%;
     height: auto;
+    background-color: #188754;
     opacity: 0.9;
+    z-index: 9999;
 }
 
 .navbar-brand:hover {
@@ -153,7 +156,7 @@ section {
     float: left;
     width: 700px;
     height: 500px;
-    margin: none;
+    margin: auto;
     padding: 5px;
 }
 
@@ -196,6 +199,10 @@ footer .text:hover {
 
 #media-social a {
     font-family: 'Changa', sans-serif;
+}
+
+#media {
+    box-shadow: 10px 10px 10px rgba(0,0,0,.50)
 }
 
 @media screen and (max-width: 1000px){
