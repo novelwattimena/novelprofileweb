@@ -52,7 +52,6 @@ table {
 
 
 .jumbotron {
-    justify-content: center;
     text-align: center;
     background-color: #20c997;
     color: black;
@@ -99,32 +98,24 @@ section {
     font-family: 'Changa', sans-serif;
 }
 
-.navbar-brand {
+.navbar-brand, .nav-link {
     cursor: pointer;
     transition: all .5s ease-in;
-    text-align: center;
     color: white;
-    display: inline-block;
-}
-
-.navbar {
-    position: fixed;
-    width: 100%;
-    height: auto;
-    background-color: #188754;
-    opacity: 0.9;
-    z-index: 9999;
 }
 
 .navbar-brand:hover {
     color: black;
 }
 
-.nav-link {
-    cursor: pointer;
-    transition: all .5s ease-in;
-    text-align: center;
-    color: white;
+.navbar {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #188754;
+    opacity: 0.9;
+    z-index: 9999;
 }
 
 .video {
@@ -135,7 +126,7 @@ section {
     border-radius: 10px;
 }
 
-.container-ref p {
+.container-r p {
     width: 100%;
     height: auto;
     padding: 5px;
@@ -151,12 +142,11 @@ section {
     font-family: 'Changa', sans-serif;
 }
 
-.container-ref img {
-    justify-content: center;
+.container-r img {
     float: left;
     width: 700px;
     height: 500px;
-    margin: auto;
+    margin: 5px;
     padding: 5px;
 }
 
@@ -173,22 +163,36 @@ h2 {
     font-family: 'Shrikhand', cursive;
 }
 
-footer a {
+.footer {
+    text-align: center;
+    background-color: #188754;
+    width: 100%;
+    height: 100px;
+    font-size: 20px;
+    padding: 22px 0;
+    color: white;
+}
+
+.footer a {
     font-family: 'Rubik Wet Paint', cursive;
 }
 
-footer p {
+.footer p {
     font-family: 'Changa', sans-serif;
 }
 
-footer .text {
+.footer .text {
     color: white;
     text-align: center;
     cursor: pointer;
     transition: all .5s ease-in;
+    display: inline-block;
+    margin: 0 0.1rem;
+    animation: pulse infinite;
+    animation-duration: 1s;
 }
 
-footer .text:hover {
+.footer .text:hover {
     color: black;
 }
 
@@ -206,13 +210,13 @@ footer .text:hover {
 }
 
 @media screen and (max-width: 1000px){
-    .container-ref img {
+    .container-r img {
         width:100%;
         height: 50%;
     }
-    .container-ref p {
-        width: 90%;
+    .container-r p {
+        width: 95%;
     }
 }
 
-
+    
