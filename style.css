@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -51,6 +50,9 @@ table {
 
 /* style */
 
+.profile img {
+    box-shadow: 5px 5px 5px rgba(0,0,0,.50);
+}
 
 .jumbotron {
     text-align: center;
@@ -59,6 +61,7 @@ table {
     padding-top: 7rem;
     background-image: url(img/utmonas.jpg);
     background-position: 0 -40px;
+    overflow: hidden;
 }
 
 .jumbotron h1, .lead {
@@ -135,6 +138,10 @@ section {
     font-family: 'Changa', sans-serif;
 }
 
+.artikel {
+    overflow: hidden;
+}
+
 .artikel img {
     display: flex;
     float: left;
@@ -161,16 +168,18 @@ section {
 }
 
 .artikel a {
-    color: green;
-    /* display: inline-block;
+    color: crimson;
+    display: inline-block;
     margin: 0 0.3rem;
     animation: flash infinite ;
-    animation-duration: 1s; */
+    animation-duration: 1s;
 }
 
 .artikel a:hover {
-    color: lawngreen;
-    transition: all .6s ease-in-out;
+    color: rgba(0,0,0,.50);
+    transition: all .6s ease-in;
+    animation: none;
+    animation-duration: none;
 }
 
 h2 {
@@ -210,10 +219,11 @@ h2 {
     text-align: center;
     cursor: pointer;
     transition: all .5s ease-in;
-    display: inline-block;
+    /* display: inline-block;
     margin: 0 0.3rem;
     animation: pulse infinite;
-    animation-duration: 1s;
+    animation-duration: 1s; */
+    margin: 0 0.2rem;
 }
 
 .footer .text:hover {
@@ -230,7 +240,7 @@ h2 {
 }
 
 #media {
-    box-shadow: 10px 10px 10px rgba(0,0,0,.50)
+    box-shadow: 5px 5px 10px rgba(0,0,0,.50)
 }
 
 .element {
@@ -246,10 +256,15 @@ h2 {
     justify-content: space-around;
 }
 
+.row-empat a {
+    z-index: 1;
+}
+
 .row-tiga {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
+    overflow: hidden;
 }
 
 .row-tiga .card {
@@ -290,4 +305,5 @@ h2 {
         width: 100%;
     }
 }
+
 
