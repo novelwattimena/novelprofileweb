@@ -47,13 +47,7 @@ table {
 	border-spacing: 0;
 }
 
-
 /* style */
-
-.profile img {
-    box-shadow: 5px 5px 5px rgba(0,0,0,.50);
-}
-
 .jumbotron {
     text-align: center;
     background-color: #20c997;
@@ -61,12 +55,15 @@ table {
     padding-top: 7rem;
     background-image: url(img/utmonas.jpg);
     background-position: 0 -40px;
-    overflow: hidden;
 }
 
 .jumbotron h1, .lead {
     font-size: calc(4vw + 0.5rem);
     font-family: 'Knewave', cursive;
+}
+
+.jumbo img {
+    box-shadow: 5px 5px 5px rgba(0,0,0,.50);
 }
 
 .rounded-circle {
@@ -100,12 +97,12 @@ section {
 
 
 .dropdown-menu {
-    font-family: 'Changa', sans-serif;
+    font-family: sans-serif;
 }
 
 .navbar-brand, .nav-link {
     cursor: pointer;
-    transition: all .5s ease-in;
+    transition: all .3s ease;
     color: white;
 }
 
@@ -116,8 +113,13 @@ section {
 .navbar {
     position: fixed;
     width: 100%;
-    height: auto;
-    background-color: #188754;
+    height: 65px;
+    background-color: #198754;
+    /* display: inline-block; */
+    /* margin: 0 0.3rem; */
+    /* animation: backInDown;
+    animation-duration: 2s; */
+    transition: .3s ease;
     opacity: 0.9;
     z-index: 9999;
 }
@@ -135,7 +137,7 @@ section {
     font-size: 20px;
     margin: 5px;
     padding: 5px;
-    font-family: 'Changa', sans-serif;
+    font-family: sans-serif;
 }
 
 .artikel {
@@ -164,22 +166,25 @@ section {
     text-align: center;
     overflow: hidden;
     /* padding: 1em; */
-    font-family: 'Changa', sans-serif;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .artikel a {
-    color: crimson;
+    color: red;
     display: inline-block;
     margin: 0 0.3rem;
     animation: flash infinite ;
     animation-duration: 1s;
+    text-decoration: none;
 }
 
 .artikel a:hover {
-    color: rgba(0,0,0,.50);
-    transition: all .6s ease-in;
+    color: blue;
+    transition: all .6s ease;
     animation: none;
     animation-duration: none;
+    text-decoration: underline;
 }
 
 h2 {
@@ -206,41 +211,53 @@ h2 {
     text-shadow: 5px 5px 5px rgba(0,0,0,.50)
 }
 
-.footer a {
-    font-family: 'Rubik Wet Paint', cursive;
-}
-
 .footer p {
-    font-family: 'Changa', sans-serif;
+    font-family: sans-serif;
 }
 
-.footer .text {
+.footer a{
     color: white;
     text-align: center;
     cursor: pointer;
     transition: all .5s ease-in;
-    /* display: inline-block;
+    display: inline-block;
     margin: 0 0.3rem;
     animation: pulse infinite;
-    animation-duration: 1s; */
-    margin: 0 0.2rem;
+    animation-duration: 1s;
+    /* margin: 0 0.3rem; */
+    text-decoration: none;
 }
 
-.footer .text:hover {
-    color: black;
+.footer a:hover {
+    color: #000;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.satu {
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+}
+
+.dua {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
 }
 
 .card-text, form {
-    font-family: 'Changa', sans-serif;
+    font-family: sans-serif;
     margin: 5px;
 }
 
-#media-social a {
-    font-family: 'Changa', sans-serif;
-}
-
-#media {
-    box-shadow: 5px 5px 10px rgba(0,0,0,.50)
+.row-empat a {
+    font-family: sans-serif;
+    z-index: 1;
 }
 
 .element {
@@ -256,15 +273,16 @@ h2 {
     justify-content: space-around;
 }
 
-.row-empat a {
-    z-index: 1;
+.row-empat .card:hover {
+    transform: scale(1.0);
+    box-shadow: 0 0 1em rgba(0,0,0, .5);
 }
 
 .row-tiga {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    overflow: hidden;
+    /* overflow-x: hidden; */
 }
 
 .row-tiga .card {
@@ -272,6 +290,50 @@ h2 {
     margin: 10px;
 }
 
+.row-tiga .card:hover {
+    transform: scale(1.1);
+}
+
+
+/* Demo styles */
+
+.swiper {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+    
+.swiper .swiper-wrapper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    background: #188754;
+    color: #fff;
+    font-family: Helvetica;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border-radius: 8px 8px 0 0;
+}
+
+.swiper-slide .detailis {
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.swiper-slide .detailis h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 1280px){
     .artikel img {
@@ -303,6 +365,15 @@ h2 {
     }
     .navbar {
         width: 100%;
+    }
+    .container .collapse {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/1.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
     }
 }
 
