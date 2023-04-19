@@ -38,63 +38,66 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 
+
   <title>Hello me Novel</title>
 
 </head>
 
 <body>
   <!-- navbar -->
-  <header id="home">
-    <nav class="navbar navbar-expand-lg bg-transparent">
-      <div class="container">
-        <a class="navbar-brand fs-3 animate__animated animate__flash animate__infinite animate__slower"
-          href="#">Novel</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item animate__animated animate__pulse animate__infinite">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item animate__animated animate__pulse animate__infinite">
-              <a class="nav-link" href="#message">Message</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Isi
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#reference">Reference</a></li>
-                <li><a class="dropdown-item" href="#projects">Projects</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#media-social">Media Social</a></li>
-                <li><a class="dropdown-item" href="#foto">Foto-foto</a></li>
-                <li><a class="dropdown-item" href="#video">Video</a></li>
-              </ul>
-            </li>
-          </ul>
-          <!-- <form class="d-flex" role="search">
+  <header>
+    <div id="home">
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+          <a class="navbar-brand fs-3 animate__animated animate__flash animate__infinite animate__slower"
+            href="#">Novel</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item animate__animated animate__pulse animate__infinite">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item animate__animated animate__pulse animate__infinite">
+                <a class="nav-link" href="#message">Message</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  fill
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#reference">Reference</a></li>
+                  <li><a class="dropdown-item" href="#projects">Projects</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#media-social">Media Social</a></li>
+                  <li><a class="dropdown-item" href="#foto">Foto-foto</a></li>
+                  <li><a class="dropdown-item" href="#video">Video</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light" type="button" onclick="berkasnovel()">Search</button>
           </form> -->
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
   <!-- navbar end -->
 
   <!-- jumbotron -->
   <section class="jumbotron">
     <div class="jumbo">
-      <img src="img/novel.jpg" alt="memuat gambar novel" id="jumbotron"
+      <img src="img/novel.jpg" alt="loading..." id="jumbotron"
         class="rounded-circle img-thumbnail shadow animate__animated animate__bounce animate__slow">
     </div>
     <h1 class="display-4 animate__animated animate__lightSpeedInLeft animate__slow">Novel Thadeus Wattimena</h1>
@@ -109,7 +112,7 @@
 
 
   <!-- about -->
-  <section id="reference">
+  <article id="reference">
     <div class="container">
       <div class="row text-center">
         <div class="col" data-aos="zoom-in">
@@ -117,10 +120,8 @@
         </div>
       </div>
       <div class="artikel">
-        <img src="img/novel1.jpg" class="card-img-top" alt="memuat gambar novel" data-aos="fade-right">
-        <p class="element fst-italic" data-aos="fade-right">Novel Thadeus Wattimena<a
-            href="https://question.novelthadeus.repl.co/" target="_blank" class="fst-normal"><i
-              class="bi bi-bell-fill"></i>Click</a></p>
+        <img src="img/novel1.jpg" class="card-img-top" alt="loading..." data-aos="fade-right">
+        <p id="my-element" class="element fst-italic" data-aos="fade-right">Novel Thadeus Wattimena<a>Click</a></p>
         <div class="col" data-aos="fade-left">
           <p>Hai Semuanya...!
             Perkenalkan nama saya novel berasal dari negara Indonesia lahir di Tangerang, pada tanggal 11 November
@@ -178,7 +179,7 @@
         d="M0,64L48,85.3C96,107,192,149,288,149.3C384,149,480,107,576,122.7C672,139,768,213,864,213.3C960,213,1056,139,1152,101.3C1248,64,1344,64,1392,64L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
     </svg>
-  </section>
+  </article>
   <!-- end about -->
 
   <!-- projects -->
@@ -192,7 +193,7 @@
       <div class="row-tiga">
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="50">
           <div class="card">
-            <img src="img/gambar1.jpg" class="card-img-top" alt="gambar1 novel">
+            <img src="img/gambar1.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -201,7 +202,7 @@
         </div>
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="150">
           <div class="card">
-            <img src="img/gambar2.jpg" class="card-img-top" alt="gambar2 novel">
+            <img src="img/gambar2.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -210,7 +211,7 @@
         </div>
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="250">
           <div class="card">
-            <img src="img/gambar4.jpg" class="card-img-top" alt="gambar3 novel">
+            <img src="img/gambar4.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -219,7 +220,7 @@
         </div>
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="350">
           <div class="card">
-            <img src="img/gambar6.jpg" class="card-img-top" alt="gamabar4 novel">
+            <img src="img/gambar6.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -228,7 +229,7 @@
         </div>
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="450">
           <div class="card">
-            <img src="img/gambar7.jpg" class="card-img-top" alt="gambar5 novel">
+            <img src="img/gambar7.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -237,7 +238,7 @@
         </div>
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="550">
           <div class="card">
-            <img src="img/gambar6.jpg" class="card-img-top" alt="gambar6 novel">
+            <img src="img/gambar6.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -246,7 +247,7 @@
         </div>
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="650">
           <div class="card">
-            <img src="img/gambar8.jpg" class="card-img-top" alt="gambar7 novel">
+            <img src="img/gambar8.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -255,7 +256,7 @@
         </div>
         <div class="col-md-3 mb-2" data-aos="flip-up" data-aos-delay="750">
           <div class="card">
-            <img src="img/gambar9.jpg" class="card-img-top" alt="gambar8 novel">
+            <img src="img/gambar9.jpg" class="card-img-top" alt="loading...">
             <div class="card-body">
               <p class="card-text">Mari kita menjadi Seorang Pembelajar yang baik dengan belajar kita akan mendapatkan
                 pengalaman yang baik.</p>
@@ -283,7 +284,7 @@
       <div class="row-empat">
         <div class="col-md-3 mb-4" data-aos="flip-left" data-aos-delay="50">
           <div class="card" id="media" style="width: 18rem;">
-            <img src="img/facebook1.jpg" class="card-img-top" alt="gambar facebook">
+            <img src="img/facebook1.jpg" class="card-img-top" alt="Image Facebook">
             <div class="card-body">
               <h5 class="card-title">FACEBOOK</h5>
               <p class="card-text">Hai yuk kita berteman facebook bersama saya novel
@@ -294,7 +295,7 @@
         </div>
         <div class="col-md-3 mb-4" data-aos="flip-left" data-aos-delay="150">
           <div class="card" id="media" style="width: 18rem;">
-            <img src="img/instagram.jpg" class="card-img-top" alt="gambar instagram">
+            <img src="img/instagram.jpg" class="card-img-top" alt="Image Instagram">
             <div class="card-body">
               <h5 class="card-title">INSTAGRAM</h5>
               <p class="card-text">Hello aku sudah follow kamu kamunya kapan yuk bareng follow-an
@@ -305,7 +306,7 @@
         </div>
         <div class="col-md-3 mb-4" data-aos="flip-left" data-aos-delay="250">
           <div class="card" id="media" style="width: 18rem;">
-            <img src="img/youtube.jpg" class="card-img-top" alt="gambar youtube">
+            <img src="img/youtube.jpg" class="card-img-top" alt="Image Youtube">
             <div class="card-body">
               <h5 class="card-title">YOUTUBE</h5>
               <p class="card-text">Aku punya Channel Youtube. yuk kita saling mendukung
@@ -333,12 +334,36 @@
           <h2>VIDEO</h2>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-7">
-          <div class="ratio ratio-16x9" data-aos="flip-down">
-            <iframe src="https://youtube.com/embed/vZLpfNEWpYM" farmeborder="0" class="video" title="YouTube video"
-              allowfullscreen></iframe>
+      <!-- Swiper -->
+      <div class="video">
+        <div class="swiper imSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/vZLpfNEWpYM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/gTdgMCyCBzw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/hQMkarU1zyI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Im3ET-Ca32w"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
@@ -361,23 +386,28 @@
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-            <strong>Ok Terima Kasih</strong> Pesan anda telah diterima novel
+            <strong>Terima Kasih</strong> Pesan Anda telah berhasil dikirim. Mohon ditunggu respon dari novel 🙏
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
           <form name="submit-to-google-sheet">
             <div class="mb-3" data-aos-delay="50">
-              <label for="Nama" class="form-label" data-aos="fade-left">Nama Lengkap</label>
-              <input type="name" class="form-control" data-aos="fade-right" id="name" aria-describedby="name"
-                name="Nama">
+              <label for="name" class="form-label" data-aos="fade-left">Nama Lengkap</label>
+              <input type="text" class="form-control" data-aos="fade-right" id="name" aria-describedby="name"
+                name="Nama" required>
             </div>
             <div class="mb-3" data-aos-delay="100">
               <label for="email" class="form-label" data-aos="fade-left">Email</label>
               <input type="email" class="form-control" data-aos="fade-right" id="email" aria-describedby="email"
-                name="Email">
+                name="Email" required>
+            </div>
+            <div class="mb-3" data-aos-delay="100">
+              <label for="number" class="form-label" data-aos="fade-left">Nomor Telepon (Whatsapp)</label>
+              <input type="number" class="form-control" data-aos="fade-right" id="number" aria-describedby="number"
+                name="Nomor Telepon" required>
             </div>
             <div class="mb-3" data-aos-delay="200">
               <label for="pesan" class="pesan" data-aos="fade-left">Pesan</label>
-              <textarea class="form-control" data-aos="fade-right" id="pesan" rows="3" name="Pesan"></textarea>
+              <textarea class="form-control" data-aos="fade-right" id="pesan" rows="3" name="Pesan" required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-kirim" data-aos="fade-right"
@@ -411,13 +441,13 @@
           <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
               <div class="carousel-item active">
-                <img src="img/baru.jpg" class="d-block w-100" alt="memuat gambar novel">
+                <img src="img/baru.jpg" class="d-block w-100" alt="loading...">
               </div>
               <div class="carousel-item">
-                <img src="img/novel1.jpg" class="d-block w-100" alt="memuat gambar novel">
+                <img src="img/novel1.jpg" class="d-block w-100" alt="loading...">
               </div>
               <div class="carousel-item">
-                <img src="img/novelpoint.jpg" class="d-block w-100" alt="memuat gambar novel">
+                <img src="img/novelpoint.jpg" class="d-block w-100" alt="loading...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -443,40 +473,42 @@
   <!-- end corosel -->
 
   <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="img/papa-img.png" alt="">
-        <div class="detailis">
-          <h3>Father</h3>
+  <div class="family">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/papa-img.png" alt="Father Image">
+          <div class="detailis">
+            <h3>Father</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/L.Malambae.jpg" alt="Mother Image">
+          <div class="detailis">
+            <h3>Mother</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/kakak.png" alt="Brother Image">
+          <div class="detailis">
+            <h3>Brother</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/IMG_4382.JPG" alt="Me Image">
+          <div class="detailis">
+            <h3>I</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="img/adik.jpg" alt="Sister Image">
+          <div class="detailis">
+            <h3>Sister</h3>
+          </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <img src="img/L.Malambae.jpg" alt="">
-        <div class="detailis">
-          <h3>Mother</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="img/kakak.png" alt="">
-        <div class="detailis">
-          <h3>Brother</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="img/IMG_4382.JPG" alt="">
-        <div class="detailis">
-          <h3>I</h3>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <img src="img/adik.jpg" alt="">
-        <div class="detailis">
-          <h3>Sister</h3>
-        </div>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
-    <div class="swiper-pagination"></div>
   </div>
   <!-- end swiper -->
 
@@ -586,6 +618,27 @@
       },
     });
   </script>
+
+  <!-- video -->
+  <script>
+    var swiper = new Swiper(".imSwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
 
   <!-- java script boostrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

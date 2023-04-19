@@ -119,8 +119,8 @@ section {
     /* margin: 0 0.3rem; */
     /* animation: backInDown;
     animation-duration: 2s; */
-    transition: .3s ease;
-    opacity: 0.9;
+    transition: .6;
+    /* opacity: 0.9; */
     z-index: 9999;
 }
 
@@ -170,16 +170,17 @@ section {
     font-weight: bold;
 }
 
-.artikel a {
+.artikel .element a {
     color: red;
     display: inline-block;
     margin: 0 0.3rem;
     animation: flash infinite ;
     animation-duration: 1s;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.artikel a:hover {
+.artikel .element a:hover {
     color: blue;
     transition: all .6s ease;
     animation: none;
@@ -275,7 +276,7 @@ h2 {
 
 .row-empat .card:hover {
     transform: scale(1.0);
-    box-shadow: 0 0 1em rgba(0,0,0, .5);
+    box-shadow: 0 0 1em rgba(0,0,0, .3);
 }
 
 .row-tiga {
@@ -297,13 +298,13 @@ h2 {
 
 /* Demo styles */
 
-.swiper {
+.family .swiper {
     width: 100%;
     padding-top: 100px;
     padding-bottom: 50px;
 }
     
-.swiper .swiper-wrapper .swiper-slide {
+.family .swiper .swiper-wrapper .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
@@ -315,25 +316,48 @@ h2 {
     border-radius: 8px;
 }
 
-.swiper-slide img {
+.family .swiper-slide img {
     display: block;
     width: 100%;
     height: 300px;
     border-radius: 8px 8px 0 0;
 }
 
-.swiper-slide .detailis {
+.family .swiper-slide .detailis {
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
     line-height: 50px;
 }
 
-.swiper-slide .detailis h3 {
+.family .swiper-slide .detailis h3 {
     margin: 0;
     padding: 0;
     font-size: 20px;
 }
+
+/* video */
+    .video .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .video .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* background: #fff; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
 
 @media screen and (max-width: 1280px){
     .artikel img {
