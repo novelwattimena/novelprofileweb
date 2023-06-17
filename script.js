@@ -7,6 +7,7 @@ const webnovel = document.querySelector('#welcome-message');
 
 
 
+//navbar
 let scrollposition = 0;
 
 window.addEventListener('scroll', function () {
@@ -18,8 +19,6 @@ window.addEventListener('scroll', function () {
         nav.classList.remove('navbar');
     }
 });
-// akhir navbar kedua
-
 
 
 
@@ -30,10 +29,9 @@ myElement.addEventListener('click', () => {
 
 
 
-
 // kode kedua
 let nama = localStorage.getItem('nama');
-const usernameRegex = /^[aA-zZ_]{5,}$/; // regex untuk username dengan minimal 5 karakter
+const usernameRegex = /^[aA-zZ ]{9,}$/; // regex untuk username dengan minimal 5 karakter
 
 while (!nama || nama.trim() === '' || !usernameRegex.test(nama.trim())) {
   const confirmed = confirm('Do you want to enter your name? 😁');
@@ -58,5 +56,3 @@ if (nama && nama.trim() !== '') {
   webnovel.innerHTML = alert(`Hi ${nama}, welcome back to my web! 😊`);
 }
 // akhir kode
-
-// video

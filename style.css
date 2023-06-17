@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -22,11 +24,13 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    font-family: 'News Cycle', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, section {
 	display: block;
+    overflow: hidden;
 }
 body {
 	line-height: 1;
@@ -50,20 +54,18 @@ table {
 /* style */
 .jumbotron {
     text-align: center;
-    background-color: #20c997;
     color: black;
     padding-top: 7rem;
     background-image: url(img/utmonas.jpg);
-    background-position: 0 -40px;
+    background-position: 0 -100px;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.jumbotron h1, .lead {
+.jumbotron .lead {
     font-size: calc(4vw + 0.5rem);
-    font-family: 'Knewave', cursive;
-}
-
-.jumbo img {
-    box-shadow: 5px 5px 5px rgba(0,0,0,.50);
+    font-weight: bold;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
 }
 
 .rounded-circle {
@@ -71,30 +73,9 @@ table {
     height: 200px;
 }
 
-#foto {
+#foto, #projects, #video {
     background-color: #20c997;
 }
-
-#projects {
-    background-color: #20c997;
-}
-
-.container-project {
-    padding: 10px;
-}
-
-section {
-    padding-top: 3rem;
-}
-
-#video {
-    background-color: #20c997;
-}
-
-.nav-item, .navbar-brand {
-   font-family: 'Rubik Wet Paint', cursive;
-}
-
 
 .dropdown-menu {
     font-family: sans-serif;
@@ -115,40 +96,33 @@ section {
     width: 100%;
     height: 65px;
     background-color: #198754;
-    /* display: inline-block; */
-    /* margin: 0 0.3rem; */
-    /* animation: backInDown;
-    animation-duration: 2s; */
-    transition: .6;
+    transition: all .3s ease;
     /* opacity: 0.9; */
     z-index: 9999;
 }
 
-.nav-link {
+.navbar .container .nav-link {
     text-align: center;
 }
 
-.video, .carousel-inner  {
+.container .row .carousel-inner  {
     border-radius: 10px;
 }
 
-.col p {
+.container .col p {
     display: flex;
-    font-size: 20px;
+    /* font-size: 1em; */
     margin: 5px;
     padding: 5px;
     font-family: sans-serif;
+    line-height: 1.5;
 }
 
-.artikel {
-    overflow: hidden;
-}
 
-.artikel img {
-    display: flex;
+.container .artikel img {
     float: left;
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 400px;
     border-top: 5px solid lawngreen;
     border-bottom: 5px solid lawngreen;
     border-right: 5px solid lawngreen;
@@ -157,30 +131,25 @@ section {
     margin: 5px;
 }
 
-.artikel h1  {
-    font-size: 30px;
-    margin: 5px;
-    margin-top: 15px;
+.container .artikel h1  {
+    font-size: 2em;
     padding: 5px;
     background-color: lawngreen;
     text-align: center;
-    overflow: hidden;
-    /* padding: 1em; */
-    font-family: sans-serif;
     font-weight: bold;
+    overflow: hidden;
 }
 
-.artikel .element a {
+.container .artikel .element a {
     color: red;
     display: inline-block;
-    margin: 0 0.3rem;
     animation: flash infinite ;
     animation-duration: 1s;
     text-decoration: none;
     cursor: pointer;
 }
 
-.artikel .element a:hover {
+.container .artikel .element a:hover {
     color: blue;
     transition: all .6s ease;
     animation: none;
@@ -188,17 +157,22 @@ section {
     text-decoration: underline;
 }
 
-h2 {
-    font-size: calc(3vw + 0.3rem);
-    margin: 20px;
-    font-family: 'Press Start 2P', cursive;
-    font-weight: bold;
+.container .artikel .element {
+    position: absolute;
+    margin-top: 26rem;
+    width: 500px;
+    text-align: center;
 }
 
-.card-title {
+.container h2 {
+    font-size: calc(3vw + 0.3rem);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.container .row-empat .card-title {
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Shrikhand', cursive;
 }
 
 .footer {
@@ -209,7 +183,6 @@ h2 {
     font-size: 15px;
     padding: 15px 0;
     color: white;
-    text-shadow: 5px 5px 5px rgba(0,0,0,.50)
 }
 
 .footer p {
@@ -220,7 +193,7 @@ h2 {
     color: white;
     text-align: center;
     cursor: pointer;
-    transition: all .5s ease-in;
+    transition: all .5s ease;
     display: inline-block;
     margin: 0 0.3rem;
     animation: pulse infinite;
@@ -261,14 +234,6 @@ h2 {
     z-index: 1;
 }
 
-.element {
-    position: absolute;
-    padding-top: 510px;
-    right: 650px;
-    width: 500px;
-    height: auto;
-}
-
 .row-empat {
     display: flex;
     justify-content: space-around;
@@ -276,14 +241,13 @@ h2 {
 
 .row-empat .card:hover {
     transform: scale(1.0);
-    box-shadow: 0 0 1em rgba(0,0,0, .3);
+    box-shadow: 0 0 1em rgba(0,0,0,0.3);
 }
 
 .row-tiga {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    /* overflow-x: hidden; */
 }
 
 .row-tiga .card {
@@ -337,44 +301,35 @@ h2 {
 }
 
 /* video */
-    .video .swiper {
+    .container .video .swiper {
       width: 100%;
       height: 100%;
     }
 
-    .video .swiper-slide {
+    .container .video .swiper .swiper-wrapper .swiper-slide {
       text-align: center;
       font-size: 18px;
-      /* background: #fff; */
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .video .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
 
 
 @media screen and (max-width: 1280px){
-    .artikel img {
+    .container .artikel img {
         width: 97%;
         height: 100%;
     }
-    .col p {
+    .container .col p {
         width: 97%;
         height: auto;
     }
-    .element {
+    .container .artikel .element {
        position: static;
-       padding-top: 70%;
-       padding: 5%;
-       text-align: center;
+       margin-top: 0;
        width: 100%;
-       height: auto;
+       text-align: center;
     }
     .jumbotron {
         text-align: center;
@@ -400,5 +355,3 @@ h2 {
     border-radius: 5px;
     }
 }
-
-
