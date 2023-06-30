@@ -263,7 +263,6 @@ table {
   background-color: #188754;
   width: 100%;
   height: 100%;
-  /* font-size: 1em; */
   padding: 15px 0;
   color: #ffffff;
 }
@@ -442,7 +441,6 @@ table {
   border: 20px solid #f8f8f8;
   padding-bottom: 59px;
   text-align: center;
-  /* margin-right: 30%; */
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
   display: none;
   border-radius: 5px;
@@ -450,7 +448,6 @@ table {
 
 .language ul li {
   list-style: none;
-  /* margin-bottom: 5px; */
 }
 
 .language ul li:hover {
@@ -524,15 +521,11 @@ a.in::before {
     position: relative;
     width: 100%;
     height: 100%;
-    /* background-image: url(img/1.png);
-    background-size: cover;
-    background-position: center; */
     background-color: #188754;
     border-radius: 5px;
   }
   .language {
     position: absolute;
-    /* background-color: #fff; */
     left: 20%;
   }
 }
