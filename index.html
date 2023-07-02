@@ -37,90 +37,67 @@
 
   <body>
     <!-- navbar -->
-    <header>
-      <div id="home">
-        <nav class="navbar navbar-expand-lg bg-transparent">
-          <div id="clock" class="clock"></div>
-          <div class="container">
-            <a
-              class="navbar-brand fs-3 animate__animated animate__flash animate__infinite animate__slower"
-              href="#"
-              >Novel</a
-            >
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarScroll"
-              aria-controls="navbarScroll"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-              <ul
-                class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll"
-                style="--bs-scroll-height: 100px"
-              >
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Home</a>
-                </li>
-                <li
-                  class="nav-item animate__animated animate__pulse animate__infinite"
-                >
-                  <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li
-                  class="nav-item animate__animated animate__pulse animate__infinite"
-                >
-                  <a class="nav-link" href="#message">Message</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">Fill
-                  </a>
-                  <div class="about-menu">
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="#reference">Refernce</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#projects">Project</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider"/>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#media-social">Social Media</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#foto">Photo</a></li>
-                    <li><a class="dropdown-item" href="#video">Videos</a></li>
-                  </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
+    <div id="home">
+    <nav class="navbar bg-transparent">
+      <div class="container">
+        <a class="navbar-brand" href="#">Novel Wattimena</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">Novel</h5>
+            <div id="clock" class="clock text-light"></div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <!-- Language -->
-          <div class="language">
-          <div class="language-selected"><span class="bahasa">En-</span>
-            <i class="bi bi-chevron-down"></i>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link text-light active animate__animated animate__pulse animate__infinite" aria-current="page">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://question.novelthadeus.repl.co">Click</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="language-menu">
+                <ul class="dropdown-menu dropdown-menu-light">
+                  <li><a class="dropdown-item" href="#reference">Reference</a></li>
+                  <li><a class="dropdown-item" href="#project">Project</a></li>
+                  <li><a class="dropdown-item" href="#kirim-pesan">Message</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#social-media">Social Media</a></li>
+                  <li><a class="dropdown-item" href="#videos">Videos</a></li>
+                  <li><a class="dropdown-item" href="#photo">Photo</a></li>
+                </ul>
+              </div>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search Google" aria-label="Search">
+              <button class="btn btn-light" type="submit" id="search">Search</button>
+            </form>
           </div>
-          <ul>
-            <li><a href="#" class="en">EN</a></li>
-            <!-- <li><a href="#" class="jr">GE</a></li> -->
-            <li><a href="#" class="in">IN</a></li>
-          </ul>
-          </div>
-        <!-- end language -->
-        </nav>
+        </div>
       </div>
-    </header>
+      <div class="language">
+        <div class="language-selected"><span class="bahasa">En-</span>
+          <i class="bi bi-chevron-down"></i>
+        </div>
+        <ul>
+          <li><a href="#" class="en">EN</a></li>
+          <li><a href="#" class="in">IN</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
     <!-- navbar end -->
 
     <!-- jumbotron -->
@@ -133,13 +110,11 @@
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="svg"
-        viewBox="0 0 1440 320"
-      >
+        viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
           fill-opacity="1"
-          d="M0,128L48,122.7C96,117,192,107,288,90.7C384,75,480,53,576,69.3C672,85,768,139,864,165.3C960,192,1056,192,1152,165.3C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
+          d="M0,128L48,122.7C96,117,192,107,288,90.7C384,75,480,53,576,69.3C672,85,768,139,864,165.3C960,192,1056,192,1152,165.3C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
       </svg>
     </div>
     <!-- end jumbotron -->
@@ -152,16 +127,15 @@
             <h2 class="title1">REFERENCE</h2>
           </div>
         </div>
+        <!-- <p id="my-element" class="element fst-italic" data-aos="fade-right">
+          <a class="article">Click</a>
+        </p> -->
         <div class="artikel">
           <img
             src="img/novel1.jpg"
             class="card-img-top"
             alt="loading..."
-            data-aos="fade-right"
-          />
-          <p id="my-element" class="element fst-italic" data-aos="fade-right">
-            <a class="article">Click</a>
-          </p>
+            data-aos="fade-right"/>
           <div class="col mb-4" data-aos="fade-left">
             <p class="article1">Hi all...! Introducing my name Novel is from the Indonesian state born in Tangerang, on November 11 2001. I come from a family who lives in Sangihe Archipelago Regency, Descendants of Wattimena-Malambae blood, who have Ambon and Sangihe blood. I have status as a Student from the Open University and hopefully I can finish and stay at this University. Especially I am always grateful to God who until now is still given breath and enjoys life in this world. I want to be a child who is devoted to both parents who can make both parents proud, especially to God. So that's me Novel Thadeus Wattimena So Thank you.</p>
           </div>
@@ -313,7 +287,7 @@
     <!-- end projects -->
 
     <!-- contact -->
-    <article id="media-social" class="About">
+    <article id="social-media" class="About">
       <div class="container">
         <div class="row text-center">
           <div class="col" data-aos="zoom-in">
@@ -322,7 +296,7 @@
         </div>
         <div class="row-empat">
           <div class="col-md-3 mb-4" data-aos="flip-left" data-aos-delay="50">
-            <div class="card" id="media" style="width: 18rem">
+            <div class="card" id="media">
               <img
                 src="img/facebook1.jpg"
                 class="card-img-top"
@@ -342,7 +316,7 @@
             </div>
           </div>
           <div class="col-md-3 mb-4" data-aos="flip-left" data-aos-delay="150">
-            <div class="card" id="media" style="width: 18rem">
+            <div class="card" id="media">
               <img
                 src="img/instagram.jpg"
                 class="card-img-top"
@@ -362,7 +336,7 @@
             </div>
           </div>
           <div class="col-md-3 mb-4" data-aos="flip-left" data-aos-delay="250">
-            <div class="card" id="media" style="width: 18rem">
+            <div class="card" id="media">
               <img
                 src="img/youtube.jpg"
                 class="card-img-top"
@@ -394,7 +368,7 @@
     <!-- end contact -->
 
     <!-- video -->
-    <section id="video" class="About">
+    <section id="videos" class="About">
       <div class="container">
         <div class="row text-center">
           <div class="col" data-aos="zoom-in">
@@ -472,7 +446,7 @@
     <!-- end video -->
 
     <!-- Daftar Nama -->
-    <section id="message" class="About">
+    <section class="About" id="kirim-pesan">
       <div class="container">
         <div class="row text-center">
           <div class="col" data-aos="zoom-in">
@@ -584,7 +558,7 @@
     <!-- end daftar nama -->
 
     <!-- corosel -->
-    <section id="foto" class="About">
+    <section id="photo" class="About">
       <div class="container">
         <div class="row text-center">
           <div class="col" data-aos="zoom-in">
@@ -678,7 +652,7 @@
           <div class="swiper-slide">
             <img src="img/kakak.png" alt="Brother Image" />
             <div class="detailis" id="Brother">
-              <h3>Brother</h3>
+              <h3>Older brother</h3>
             </div>
           </div>
           <div class="swiper-slide">
@@ -690,7 +664,7 @@
           <div class="swiper-slide">
             <img src="img/adik.jpg" alt="Sister Image" />
             <div class="detailis" id="Sister">
-              <h3>Sister</h3>
+              <h3>Younger brother</h3>
             </div>
           </div>
         </div>
@@ -700,7 +674,7 @@
     <!-- end swiper -->
 
     <!-- footer -->
-      <footer id="contact" class="footer">
+      <footer id="contact" class="footer bg-success">
         <div class="footer-element"> 
           <p class="contact-me"> Contact Me </p> 
           <i class="bi bi-whatsapp"></i>

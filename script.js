@@ -13,12 +13,12 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// link
-const myElement = document.getElementById("my-element");
+// // link
+// const myElement = document.getElementById("my-element");
 
-myElement.addEventListener("click", () => {
-  window.location.href = "https://question.novelthadeus.repl.co";
-});
+// myElement.addEventListener("click", () => {
+//   window.location.href = "https://question.novelthadeus.repl.co";
+// });
 
 //clock
 setInterval(() => {
@@ -34,22 +34,25 @@ setInterval(() => {
 $(function () {
   $(".in").click(function () {
     //cabecalho
+    //navbar language
     $(".nav-link ").eq(0).text("Rumah");
     $(".nav-link ").eq(1).text("Kontak");
-    $(".nav-link ").eq(2).text("Pesan");
-    $(".nav-link ").eq(3).text("Isi");
+    $(".nav-link ").eq(2).text("Klik");
+    $(".nav-link ").eq(3).text("Trik-turun");
     $(".language-selected").removeClass("change-en");
     // $(".language-selected").removeClass("change-jr");
     $(".language-selected").addClass("change-in");
 
     // fill
     $(".bahasa").text("In-");
-    $(".about-menu ul:nth-child(1) li:nth-child(1) a").text("Referensi");
-    $(".about-menu ul:nth-child(1) li:nth-child(2) a").text("Proyek");
-    $(".about-menu ul:nth-child(1) li:nth-child(4) a").text("Sosial Media");
-    $(".about-menu ul:nth-child(1) li:nth-child(5) a").text("Foto");
-    $(".about-menu ul:nth-child(1) li:nth-child(6) a").text("Video");
-
+    $(".language-menu ul:nth-child(1) li:nth-child(1) a").text("Referensi");
+    $(".language-menu ul:nth-child(1) li:nth-child(2) a").text("Proyek");
+    $(".language-menu ul:nth-child(1) li:nth-child(3) a").text("Pesan");
+    $(".language-menu ul:nth-child(1) li:nth-child(5) a").text("Sosial Media");
+    $(".language-menu ul:nth-child(1) li:nth-child(6) a").text("Video");
+    $(".language-menu ul:nth-child(1) li:nth-child(7) a").text("Foto");
+    $("#search ").text("Mencari");
+    //end language navbar
     // jumbotron
     $("#status").text("Mahasiswa");
 
@@ -137,21 +140,25 @@ $(function () {
 $(function () {
   $(".en").click(function () {
     //cabecalho
+    //navbar language
     $(".nav-link ").eq(0).text("Home");
-    $(".nav-link ").eq(1).text("Contak");
-    $(".nav-link ").eq(2).text("Message");
-    $(".nav-link ").eq(3).text("Fill");
+    $(".nav-link ").eq(1).text("Contact");
+    $(".nav-link ").eq(2).text("Click");
+    $(".nav-link ").eq(3).text("Dropdown");
     $(".language-selected").removeClass("change-in");
     // $(".language-selected").removeClass("change-jr");
     $(".language-selected").addClass("change-en");
 
     // fill
     $(".bahasa").text("En-");
-    $(".about-menu ul:nth-child(1) li:nth-child(1) a").text("Reference");
-    $(".about-menu ul:nth-child(1) li:nth-child(2) a").text("Project");
-    $(".about-menu ul:nth-child(1) li:nth-child(4) a").text("Social Media");
-    $(".about-menu ul:nth-child(1) li:nth-child(5) a").text("Photo");
-    $(".about-menu ul:nth-child(1) li:nth-child(6) a").text("Videos");
+    $(".language-menu ul:nth-child(1) li:nth-child(1) a").text("Reference");
+    $(".language-menu ul:nth-child(1) li:nth-child(2) a").text("Project");
+    $(".language-menu ul:nth-child(1) li:nth-child(3) a").text("Message");
+    $(".language-menu ul:nth-child(1) li:nth-child(5) a").text("Social Media");
+    $(".language-menu ul:nth-child(1) li:nth-child(6) a").text("Videos");
+    $(".language-menu ul:nth-child(1) li:nth-child(7) a").text("Photo");
+    $("#search ").text("Search");
+    //end navbar language
 
     // jumbotron
     $("#status").text("Student");
@@ -226,9 +233,9 @@ $(function () {
     $(".title6").text("PHOTO");
     $("#Father").text("Father");
     $("#Mother").text("Mother");
-    $("#Brother").text("Brother");
+    $("#Brother").text("Older brother");
     $("#I").text("I");
-    $("#Sister").text("Sister");
+    $("#Sister").text("Younger brother");
 
     // footer
     $(".contact-me").text("Contact Me");

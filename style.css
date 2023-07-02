@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -135,7 +136,7 @@ table {
 /* style */
 .jumbotron {
   text-align: center;
-  color: black;
+  color: #fff;
   padding-top: 7rem;
   background-image: url(img/utmonas.jpg);
   background-position: 0 -100px;
@@ -154,9 +155,9 @@ table {
   height: 200px;
 }
 
-#foto,
+#photo,
 #projects,
-#video {
+#videos {
   background-color: #20c997;
 }
 
@@ -171,16 +172,15 @@ table {
   color: #ffffff;
 }
 
-.navbar-brand:hover {
-  color: #000000;
-}
-
 .navbar {
+  display: flex;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 5rem;
+  height: 7%;
   background-color: #198754;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   z-index: 9999;
 }
 
@@ -188,27 +188,36 @@ table {
   text-align: center;
 }
 
+.navbar .container .offcanvas {
+  background-color: rgb(24, 135, 84, 0.5);
+}
+
+.navbar .container .navbar-brand {
+  font-family: "Parisienne", cursive;
+  font-size: 2em;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
 .container .row .carousel-inner {
   border-radius: 10px;
 }
 
-.container .col p {
-  display: flex;
-  margin: 5px;
-  padding: 5px;
-  line-height: 2.1;
+.container .artikel .col p {
+  width: 100%;
+  height: 100%;
+  line-height: 2;
 }
 
 .container .artikel img {
   float: left;
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   border-top: 5px solid lawngreen;
   border-bottom: 5px solid lawngreen;
   border-right: 5px solid lawngreen;
   border-left: 5px solid lawngreen;
   border-radius: 10px;
-  margin: 5px;
+  margin-right: 10px;
 }
 
 .container .artikel h1 {
@@ -258,9 +267,13 @@ table {
   line-height: 1.3;
 }
 
+/* .container .video iframe {
+  width: 560px;
+  height: 315px;
+} */
+
 .footer {
   text-align: center;
-  background-color: #188754;
   width: 100%;
   height: 100%;
   padding: 15px 0;
@@ -297,13 +310,17 @@ table {
   font-weight: bold;
 }
 
-.row-empat .card-body a {
+.row-empat .card .card-body a {
   z-index: 1;
 }
 
 .row-empat {
   display: flex;
   justify-content: space-around;
+}
+
+.row-empat .card {
+  width: 18rem;
 }
 
 .row-empat .card:hover {
@@ -384,19 +401,13 @@ table {
   padding: 7rem 5% 1.5rem;
 }
 
-/* clock */
-
-.clock {
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  color: #ffffff;
-}
-
 /* Language */
 
 .language {
-  position: relative;
+  position: absolute;
+  right: 0;
+  left: 90%;
+  display: flex;
   width: 120px;
   /* margin-left: 40px; */
   font-weight: bold;
@@ -487,14 +498,16 @@ a.in::before {
 
 /* Laptop */
 
-@media screen and (max-width: 1280px) {
-  .container .artikel img {
-    width: 97%;
-    height: 100%;
+/* (min-width: 1024px) & (max-width: 1440px) */
+
+@media screen and (max-width: 1440px) {
+  .navbar {
+    width: 100%;
+    height: 8%;
   }
-  .container .col p {
-    width: 97%;
-    height: auto;
+  .container .artikel .col p {
+    width: 100%;
+    height: 100%;
   }
   .container .artikel .element {
     position: static;
@@ -505,7 +518,7 @@ a.in::before {
   .jumbotron {
     text-align: center;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .row-empat {
     flex-wrap: wrap;
@@ -513,19 +526,66 @@ a.in::before {
   .row-tiga {
     flex-wrap: wrap;
   }
-  .navbar {
-    position: fixed;
-    width: 100%;
+  .language {
+    position: absolute;
+    right: 0;
+    left: 80%;
   }
-  .container .collapse {
-    position: relative;
+  .container .artikel img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+/* Tablet */
+/* (min-width: 768px) & (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .navbar {
     width: 100%;
-    height: 100%;
-    background-color: #188754;
-    border-radius: 5px;
+    height: 9%;
   }
   .language {
     position: absolute;
-    left: 20%;
+    right: 0;
+    left: 70%;
+  }
+  .container .artikel img {
+    width: 40%;
+    height: 40%;
+  }
+  .container .artikel .col p {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Mobile Phone */
+@media screen and (max-width: 767px) {
+  .navbar {
+    width: 100%;
+    height: 8%;
+  }
+  .language {
+    position: absolute;
+    right: 0;
+    left: 60%;
+  }
+  .container .artikel img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .artikel .col p {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 370px) {
+  .language {
+    position: relative;
+    margin-top: 1.5%;
+    right: 0;
+    left: 35%;
+    background-color: #188754;
   }
 }
