@@ -102,11 +102,11 @@ aside,
 details,
 figcaption,
 figure,
-/* footer, */
+footer,
 header,
 /* nav, */
 hgroup,
-/* menu, */
+menu,
 section {
   display: block;
   overflow: hidden;
@@ -174,15 +174,13 @@ table {
 }
 
 .navbar {
-  display: flex;
+  /* display: flex; */
   position: fixed;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 8%;
+  height: 7%;
   background-color: #198754;
-  transition: all 0.5s ease;
   z-index: 9999;
+  transition: all 0.5s ease;
 }
 
 .navbar .container .nav-link {
@@ -536,9 +534,6 @@ a.in::before {
     width: 50%;
     height: 50%;
   }
-  /* .footer {
-    display: flex;
-  } */
 }
 
 /* Tablet */
