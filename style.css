@@ -102,10 +102,11 @@ aside,
 details,
 figcaption,
 figure,
-footer,
+/* footer, */
 header,
+/* nav, */
 hgroup,
-menu,
+/* menu, */
 section {
   display: block;
   overflow: hidden;
@@ -178,7 +179,7 @@ table {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 7%;
+  height: 9%;
   background-color: #198754;
   transition: all 0.5s ease;
   z-index: 9999;
@@ -503,7 +504,8 @@ a.in::before {
 @media screen and (max-width: 1440px) {
   .navbar {
     width: 100%;
-    height: 8%;
+    height: 9%;
+    position: fixed;
   }
   .container .artikel .col p {
     width: 100%;
@@ -535,6 +537,9 @@ a.in::before {
     width: 50%;
     height: 50%;
   }
+  /* .footer {
+    display: flex;
+  } */
 }
 
 /* Tablet */
@@ -563,7 +568,7 @@ a.in::before {
 @media screen and (max-width: 767px) {
   .navbar {
     width: 100%;
-    height: 8%;
+    height: 9%;
   }
   .language {
     position: absolute;
@@ -580,12 +585,16 @@ a.in::before {
   }
 }
 
-@media (max-width: 370px) {
+@media screen and (max-width: 360px) {
   .language {
     position: relative;
-    margin-top: 1.5%;
+    margin-top: 1%;
     right: 0;
     left: 35%;
     background-color: #188754;
+  }
+  .navbar {
+    width: 100%;
+    height: 8%;
   }
 }
