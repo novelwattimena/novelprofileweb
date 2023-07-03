@@ -179,7 +179,7 @@ table {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 9%;
+  height: 8%;
   background-color: #198754;
   transition: all 0.5s ease;
   z-index: 9999;
@@ -504,7 +504,7 @@ a.in::before {
 @media screen and (max-width: 1440px) {
   .navbar {
     width: 100%;
-    height: 9%;
+    height: 8%;
     position: fixed;
   }
   .container .artikel .col p {
@@ -547,7 +547,8 @@ a.in::before {
 @media screen and (max-width: 1024px) {
   .navbar {
     width: 100%;
-    height: 9%;
+    height: 8%;
+    position: fixed;
   }
   .language {
     position: absolute;
@@ -565,10 +566,11 @@ a.in::before {
 }
 
 /* Mobile Phone */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .navbar {
     width: 100%;
     height: 9%;
+    position: fixed;
   }
   .language {
     position: absolute;
@@ -585,10 +587,9 @@ a.in::before {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 370px) {
   .language {
     position: relative;
-    margin-top: 1%;
     right: 0;
     left: 35%;
     background-color: #188754;
@@ -596,5 +597,6 @@ a.in::before {
   .navbar {
     width: 100%;
     height: 8%;
+    position: fixed;
   }
 }
