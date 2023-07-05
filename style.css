@@ -588,6 +588,7 @@ a.in::before {
     transform: scaleY(0);
     transform-origin: top;
     transition: all 0.6s ease;
+    z-index: -9;
   }
   .language ul {
     position: absolute;
