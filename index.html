@@ -80,14 +80,15 @@
               </div>
               </li>
             </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search Google" aria-label="Search">
-              <button class="btn btn-light" type="submit" id="search">Search</button>
-            </form>
+            <div class="d-flex mt-3" role="search">
+              <input id="search" type="search" class="form-control me-2" placeholder="Search Google" aria-label="Search">
+              <button for="search" id="submit" class="btn btn-light" type="submit">Search</button>
+            </div>
+            <div id="result-container"></div>
           </div>
         </div>
       </div>
-      <div class="language">
+      <div class="language" id="language">
         <div class="language-selected"><span class="bahasa">En-</span>
           <i class="bi bi-chevron-down"></i>
         </div>
@@ -676,15 +677,12 @@
           <i class="bi bi-whatsapp"></i>
           <a href="https://wa.me/+6282259039663" class="text fw-bold"> Whatsapp </a>
           <i class="bi bi-envelope"></i>
-          <a href="mailto:novelthadieus.com" class="text fw-bold"> Email </a>
+          <a href="mailto:novelthadieuswattimena@gmail.com" class="text fw-bold"> Email </a>
           <p class="copy">&copy; Copyright 2023 </p>
         </div>
       </footer>
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#188754" fill-opacity="1" d="M0,128L26.7,117.3C53.3,107,107,85,160,80C213.3,75,267,85,320,106.7C373.3,128,427,160,480,154.7C533.3,149,587,107,640,112C693.3,117,747,171,800,186.7C853.3,203,907,181,960,192C1013.3,203,1067,245,1120,229.3C1173.3,213,1227,139,1280,106.7C1333.3,75,1387,85,1413,90.7L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg> -->
     <!-- end footer -->
-
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -747,6 +745,8 @@
       }
     </script>
 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <!-- JS -->
     <script src="script.js"></script>
 

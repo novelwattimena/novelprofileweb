@@ -1,16 +1,37 @@
-//navbar
-const nav = document.getElementById("home");
+//scroll navbar
+$(document).ready(function () {
+  $(window).scroll(function () {
+    let scrollPosition = window.scrollY;
+    if (scrollPosition >= 60) {
+      $("#home").addClass("navbar");
+    } else if (scrollPosition <= 60) {
+      $("#home").removeClass("navbar");
+    }
+  });
+});
 
-let scrollposition = 0;
+$(document).ready(function () {
+  $(window).scroll(function () {
+    let scrollPosition = window.scrollY;
+    if (scrollPosition >= 600) {
+      $("#language").css("display", "flex");
+      $("#language").css("transform", "scaleY(1)");
+    } else if (scrollPosition <= 600) {
+      $("#language").css("display", "none");
+    }
+  });
+});
 
-window.addEventListener("scroll", function () {
-  scrollposition = window.scrollY;
-
-  if (scrollposition >= 60) {
-    nav.classList.add("navbar");
-  } else if (scrollposition <= 60) {
-    nav.classList.remove("navbar");
-  }
+// search navbar
+$(document).ready(function () {
+  $("#submit").on("click", function () {
+    var value = $("#search").val();
+    var baseUrl = "https://google.com/search?q=";
+    if (!value) {
+      value = "Novel Wattimena";
+    }
+    window.location.href = baseUrl + encodeURIComponent(value);
+  });
 });
 
 // // link
