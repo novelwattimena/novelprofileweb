@@ -134,6 +134,11 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --warnaawal: #20c997;
+  --warnaakhir: #ffffff;
+}
+
 /* style */
 .jumbotron {
   text-align: center;
@@ -148,7 +153,7 @@ table {
 .jumbotron .lead {
   font-size: calc(4vw + 0.5rem);
   font-weight: bold;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .rounded-circle {
@@ -159,7 +164,7 @@ table {
 #photo,
 #projects,
 #videos {
-  background-color: #20c997;
+  background-color: #a6ead5;
 }
 
 .dropdown-menu {
@@ -170,7 +175,7 @@ table {
 .nav-link {
   cursor: pointer;
   transition: all 0.3s ease;
-  color: #ffffff;
+  color: var(--warnaakhir);
 }
 
 .navbar {
@@ -178,9 +183,11 @@ table {
   position: fixed;
   width: 100%;
   height: 7%;
-  background-color: #198754;
+  background-color: var(--warnaawal);
   z-index: 9999;
   transition: all 0.5s ease;
+  /* animation: slideInDown;
+  animation-duration: 1s; */
 }
 
 .navbar .container .nav-link {
@@ -188,7 +195,7 @@ table {
 }
 
 .navbar .container .offcanvas {
-  background-color: rgb(24, 135, 84, 0.5);
+  background-color: rgb(33, 201, 152, 0.5);
 }
 
 .navbar .container .navbar-brand {
@@ -209,12 +216,12 @@ table {
 
 .container .artikel img {
   float: left;
-  width: 100%;
-  height: 100%;
-  border-top: 5px solid lawngreen;
-  border-bottom: 5px solid lawngreen;
-  border-right: 5px solid lawngreen;
-  border-left: 5px solid lawngreen;
+  width: 50%;
+  height: 50%;
+  border-top: 5px solid var(--warnaawal);
+  border-bottom: 5px solid var(--warnaawal);
+  border-right: 5px solid var(--warnaawal);
+  border-left: 5px solid var(--warnaawal);
   border-radius: 10px;
   margin-right: 10px;
 }
@@ -222,33 +229,10 @@ table {
 .container .artikel h1 {
   font-size: 2em;
   padding: 5px;
-  background-color: lawngreen;
+  background-color: var(--warnaawal);
   text-align: center;
   font-weight: bold;
   overflow: hidden;
-}
-
-.container .artikel .element a {
-  color: red;
-  display: inline-block;
-  animation: flash infinite;
-  animation-duration: 1s;
-  cursor: pointer;
-}
-
-.container .artikel .element a:hover {
-  color: blue;
-  transition: all 0.6s ease;
-  animation: none;
-  animation-duration: none;
-  text-decoration: underline;
-}
-
-.container .artikel .element {
-  position: absolute;
-  margin-top: 26rem;
-  width: 500px;
-  text-align: center;
 }
 
 .container h2 {
@@ -276,7 +260,8 @@ table {
   width: 100%;
   height: 100%;
   padding: 15px 0;
-  color: #ffffff;
+  color: var(--warnaakhir);
+  background-color: var(--warnaawal);
 }
 
 .footer .footer-element {
@@ -293,7 +278,7 @@ table {
 }
 
 .footer a {
-  color: #ffffff;
+  color: var(--warnaakhir);
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -356,7 +341,7 @@ table {
   background-size: cover;
   width: 300px;
   height: 400px;
-  background: #198754;
+  background: var(--warnaawal);
   color: #fff;
   font-weight: bold;
   border-radius: 8px;
@@ -405,7 +390,7 @@ table {
 .language {
   position: absolute;
   right: 0;
-  left: 90%;
+  left: 70%;
   display: flex;
   width: 120px;
   /* margin-left: 40px; */
@@ -452,8 +437,11 @@ table {
   padding-bottom: 59px;
   text-align: center;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-  display: none;
-  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
+  /* display: none; */
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: all 0.5s ease-in-out;
 }
 
 .language ul li {
@@ -490,7 +478,8 @@ a.in::before {
 }
 
 .language:hover ul {
-  display: block;
+  /* display: block; */
+  transform: scaleY(1);
 }
 
 /* Media Query */
@@ -584,15 +573,15 @@ a.in::before {
     position: absolute;
     right: 0;
     top: 100%;
-    background-color: #198754;
-    transform: scaleY(0);
+    background-color: var(--warnaawal);
     transform-origin: top;
-    transition: all 0.6s ease;
-    z-index: -9;
+    transition: all 0.5s ease-in-out;
+    z-index: -2;
   }
   .language ul {
     position: absolute;
     right: 0;
     left: 0;
+    top: 100%;
   }
 }

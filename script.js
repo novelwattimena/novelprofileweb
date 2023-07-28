@@ -14,10 +14,9 @@ $(document).ready(function () {
   $(window).scroll(function () {
     let scrollPosition = window.scrollY;
     if (scrollPosition >= 600) {
-      $("#language").css("display", "flex");
       $("#language").css("transform", "scaleY(1)");
     } else if (scrollPosition <= 600) {
-      $("#language").css("display", "none");
+      $("#language").css("transform", "scaleY(0)");
     }
   });
 });
