@@ -3,9 +3,21 @@ $(document).ready(function () {
   $(window).scroll(function () {
     let scrollPosition = window.scrollY;
     if (scrollPosition >= 60) {
-      $("#home").addClass("navbar");
+      $(".home").addClass("navbar");
+      $(".home").css(
+        "box-shadow",
+        "inset 0 -1px rgba(0, 0, 0, 0.2)",
+        "transform",
+        "scaleY(1)"
+      );
     } else if (scrollPosition <= 60) {
-      $("#home").removeClass("navbar");
+      $(".home").removeClass("navbar");
+      $(".home").css(
+        "box-shadow",
+        "inset 0 -1px rgba(0, 0, 0, 0.2)",
+        "transform",
+        "scaleY(0)"
+      );
     }
   });
 });
@@ -34,11 +46,11 @@ $(document).ready(function () {
 });
 
 // // link
-// const myElement = document.getElementById("my-element");
+const myElement = document.querySelector(".icon-jumbotron");
 
-// myElement.addEventListener("click", () => {
-//   window.location.href = "https://question.novelthadeus.repl.co";
-// });
+myElement.addEventListener("click", () => {
+  window.location.href = "#reference";
+});
 
 //clock
 setInterval(() => {
@@ -267,7 +279,7 @@ $(function () {
 const webnovel = document.querySelector("#welcome-message");
 
 let nama = localStorage.getItem("nama");
-const usernameRegex = /^[aA-zZ ]{9,}$/; // regex untuk username dengan minimal 10 karakter
+const usernameRegex = /^[aA-zZ., ]{9,}$/; // regex untuk username dengan minimal 10 karakter
 
 while (!nama || nama.trim() === "" || !usernameRegex.test(nama.trim())) {
   const confirmed = confirm("Do you want to enter your name? 😁");
